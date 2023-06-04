@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react'
 import React from 'react'
 import Phone from '~/assets/icons/phone.svg'
-import trustPilot from '~/assets/trustPilot.png'
+import trustPilot from '~/assets/trustpilot.png'
 import Emergencies from '~/components/Emergencies/Emergencies'
 import FrequentlyAskedQuestions from '~/components/FrequentlyAskedQuestions/FrequentlyAskedQuestions'
 import Header from '~/components/Header/Header'
