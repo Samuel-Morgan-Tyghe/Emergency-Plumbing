@@ -1,44 +1,121 @@
 import {
   Box,
-  Button,
+  Center,
   Flex,
-  HStack,
   Heading,
   Image,
   Link,
-  Spacer,
-  Text,
-  VStack,
   SimpleGrid,
+  Text,
 } from '@chakra-ui/react'
 import React from 'react'
+import Phone from '~/assets/icons/phone.svg'
+import trustPilot from '~/assets/trustPilot.png'
 import Emergencies from '~/components/Emergencies/Emergencies'
 import FrequentlyAskedQuestions from '~/components/FrequentlyAskedQuestions/FrequentlyAskedQuestions'
 import Header from '~/components/Header/Header'
 import MainImage from '~/components/MainImage/MainImage'
 import MainText from '~/components/MainText/MainText'
 
-import { Reviews } from '../components/Reviews/Reviews'
-import { TrustPilot } from './../components/TrustPilot/TrustPilot'
-
 const HomePage: React.FC = () => {
+  const emergenciesText = [
+    {
+      title: 'Burst pipes',
+      description:
+        'A burst pipe can cause significant damage to your property and result in high water bills. We will quickly identify the location of the burst and repair or replace the damaged section.',
+    },
+    {
+      title: 'Blocked Drains',
+      description:
+        'Blocked drains can cause water to back up and result in unpleasant odours. We use specialized equipment to clear the blockage and restore normal drainage.',
+    },
+    {
+      title: 'Central Heating Issues',
+      description:
+        'Issues with central heating systems can leave your home uncomfortably cold, especially during winter. Our skilled technicians can diagnose the issue and carry out necessary repairs or replacements to ensure your home stays warm.',
+    },
+    {
+      title: 'Leaks',
+      description:
+        'Leaks can occur in various places, such as pipes, taps, and toilets. We will locate the source of the leak and repair or replace the affected components to prevent further damage.',
+    },
+    {
+      title: 'Clogged Toilets',
+      description:
+        'A clogged toilet can be a frustrating and messy experience, especially if it overflows. Our team can quickly clear the blockage and ensure your toilet is working properly again.',
+    },
+    {
+      title: 'No Hot Water',
+      description:
+        'If you suddenly find yourself without hot water, it could be a sign of a faulty water heater or boiler. Our experts can diagnose the issue and carry out the necessary repairs or replacements to get your hot water flowing again.',
+    },
+  ]
   return (
     <>
-      <Box paddingX={"80px"}>
-<Header></Header>
-<MainImage></MainImage>
-<MainText></MainText>
-<SimpleGrid columns={3} spacing={"16px"} gap={"16px"} padding={"16px"} width={"100%"} justifyItems={"center"}>
-<Emergencies></Emergencies>
-<Emergencies></Emergencies>
-<Emergencies></Emergencies>
-<Emergencies></Emergencies>
-<Emergencies></Emergencies>
-<Emergencies></Emergencies>
-</SimpleGrid>
-<FrequentlyAskedQuestions></FrequentlyAskedQuestions>
+      <Header />
 
+      <Flex paddingX={'80px'} bg="#ffffff" overflow="auto">
+        <MainImage />
+        <Center flexDirection="column" w="100%" p="80px">
+          <Flex direction="column" fontSize="80px" fontWeight="700">
+            <Heading fontSize="80px" fontWeight="700">
+              We Fix All Your Plumbing
+              <Heading fontSize="80px" fontWeight="700" color="#E83A17">
+                Problems
+              </Heading>
+            </Heading>
+          </Flex>
+          <Flex alignItems="center" justifyContent="space-between" w="100%">
+            <Image src={trustPilot} alt="trustPilot" w="200px" />
+            <Link href="tel:+1234567890" overflow="auto">
+              <Flex
+                cursor="pointer"
+                bg="#E83A17"
+                rounded="full"
+                h="75px"
+                alignItems="center"
+                position="sticky"
+                top="0px"
+                p="16px"
+              >
+                <Text
+                  align={'right'}
+                  fontWeight={700}
+                  color="white"
+                  fontSize="24px"
+                >
+                  1800 123 456
+                </Text>
+                <Image src={Phone} />
+              </Flex>
+            </Link>
+          </Flex>
+        </Center>
+      </Flex>
+      <Box paddingX={'80px'}>
+        <Flex direction="column" pb="80px">
+          <MainText></MainText>
 
+          <SimpleGrid
+            columns={3}
+            spacing={'16px'}
+            gap={'16px'}
+            padding={'16px'}
+            width={'100%'}
+            justifyItems={'center'}
+          >
+            {emergenciesText.map(e => (
+              <Emergencies>
+                <>
+                  <Text fontWeight="800" fontSize="24px">
+                    {e.title}
+                  </Text>
+                  <Text>{e.description}</Text>
+                </>
+              </Emergencies>
+            ))}
+          </SimpleGrid>
+        </Flex>
 
         {/* <Flex p="4">
           <Heading size="lg">All Emergency Plumbing</Heading>
@@ -68,7 +145,7 @@ const HomePage: React.FC = () => {
           <Button
             as={Link}
             href="mailto:contact@allemergencyplumbing.com"
-            colorScheme="blue"
+            colorScheme="#2A54A8"
           >
             Contact Us Now
           </Button>
@@ -95,7 +172,7 @@ const HomePage: React.FC = () => {
             <Button
               as={Link}
               href="tel:18001234567"
-              colorScheme="blue"
+              colorScheme="#2A54A8"
               size="lg"
               fontWeight="bold"
             >
@@ -104,6 +181,7 @@ const HomePage: React.FC = () => {
           </VStack>
         </Box> */}
       </Box>
+      <FrequentlyAskedQuestions />
     </>
   )
 }

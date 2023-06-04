@@ -3,14 +3,30 @@ import { Box, Text } from '@chakra-ui/react'
 // Defining a new function component named 'ExampleComponent'
 function MainText() {
   return (
-    <Box bg="white" boxSize={250} width={'full'} padding={15}>
-      <Text color={'black'} bg="white" align={'center'}> WELCOME TO</Text>
-      <Text color={'blue'} bg="white" align={'center'}>ALL PLUMBING EMERGENCIES</Text>
-      <Text color={'black'} bg="white" align={'center'}>Your reliable and trusted plumber in Cambridge. We understand that plumbing</Text>
-      <Text color={'black'} bg="white" align={'center'}>emergencies can happen at any time, which is why we offer our services 24/7, 365 days a year.</Text>
-      <Text color={'black'} bg="white" align={'center'}>Our team of expert plumbers are fully qualified and experiences in dealing with all kinds of plumbing</Text>
-      <Text color={'black'} bg="white" align={'center'}>emergencies, from burst pipes and leas to boiler breakdowns and blocked drains. We use the latest</Text>
-      <Text color={'black'} bg="white" align={'center'}>technology and equipment to diagnose and resolve issues quickly and efficiently, saving you time and money.</Text>
+    <Box bg="white" width={'100%'} padding={'15px'}>
+      <Text color={'black'} bg="white" align={'center'} fontSize="40px">
+        WELCOME TO
+      </Text>
+      <Text
+        color={'#2A54A8'}
+        bg="white"
+        align={'center'}
+        fontSize="64px"
+        fontWeight="800"
+      >
+        ALL PLUMBING EMERGENCIES
+      </Text>
+      <Text color={'black'} bg="white" align={'center'} fontSize="24px">
+        Your reliable and trusted plumber in Cambridge. We understand that
+        plumbing emergencies can happen at any time, which is why we offer our
+        services 24/7, 365 days a year.
+        <br />
+        <br /> Our team of expert plumbers are fully qualified and experiences
+        in dealing with all kinds of plumbing emergencies, from burst pipes and
+        leas to boiler breakdowns and blocked drains. We use the latest
+        technology and equipment to diagnose and resolve issues quickly and
+        efficiently, saving you time and money.
+      </Text>
     </Box>
   )
 }
