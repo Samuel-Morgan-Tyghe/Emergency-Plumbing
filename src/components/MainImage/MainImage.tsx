@@ -1,10 +1,11 @@
 import { Box, Image } from '@chakra-ui/react'
+import plumbingImage from '~/assets/plumbingImage.png'
 
 // Defining a new function component named 'ExampleComponent'
 function MainImage() {
   return (
     <Box w="100%">
-      <Image src="/src/assets/plumbingImage.png" alt="Main Image" />
+      <Image src={plumbingImage} alt="Main Image" />
     </Box>
   )
 }
