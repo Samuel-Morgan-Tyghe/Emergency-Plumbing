@@ -1,5 +1,5 @@
 import { Box, Image } from '@chakra-ui/react'
-import plumbingImage from '~/assets/plumbingImage.png'
+import plumbingImage from '~/assets/plumbingImage.jpg'
 
 // Defining a new function component named 'ExampleComponent'
 function MainImage() {
