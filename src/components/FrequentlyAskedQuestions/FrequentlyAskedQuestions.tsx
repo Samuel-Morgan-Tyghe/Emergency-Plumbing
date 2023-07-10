@@ -44,8 +44,8 @@ function FrequentlyAskedQuestions() {
     >
       <Flex
         direction="column"
-        w={{ base: '100%', md: '66%' }}
-        py={{ base: '16px', md: '40px' }}
+        w={{ base: '100%', desktop: '66%' }}
+        py={{ base: '16px', desktop: '40px' }}
         gap={{ base: '8px', tablet: '16px', desktop: '40px' }}
       >
         <Flex direction="column" gap="8px">

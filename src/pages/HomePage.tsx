@@ -71,9 +71,16 @@ const HomePage: React.FC = () => {
             fontSize={{ base: '20px', tablet: '40px', desktop: '80px' }}
             fontWeight="700"
           >
-            <Heading fontWeight="700">
+            <Heading
+              fontWeight="700"
+              fontSize={{ base: '20px', tablet: '40px', desktop: '80px' }}
+            >
               We Fix All Your Plumbing
-              <Heading fontWeight="700" color="#E83A17">
+              <Heading
+                fontWeight="700"
+                color="#E83A17"
+                fontSize={{ base: '20px', tablet: '40px', desktop: '80px' }}
+              >
                 Problems
               </Heading>
             </Heading>
