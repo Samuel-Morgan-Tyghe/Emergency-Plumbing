@@ -4,7 +4,12 @@ import { Box, Text } from '@chakra-ui/react'
 function MainText() {
   return (
     <Box bg="white" width={'100%'} padding={'15px'}>
-      <Text color={'black'} bg="white" align={'center'} fontSize="40px">
+      <Text
+        color={'black'}
+        bg="white"
+        align={'center'}
+        fontSize={{ base: '20px', tablet: '20px', desktop: '40px' }}
+      >
         WELCOME TO
       </Text>
       <Text
@@ -17,15 +22,15 @@ function MainText() {
         ALL PLUMBING EMERGENCIES
       </Text>
       <Text color={'black'} bg="white" align={'center'} fontSize="24px">
-        Your reliable and trusted plumber in Cambridge. We understand that
+        Your reliable and trusted plumber in Oxfordshire. We understand that
         plumbing emergencies can happen at any time, which is why we offer our
         services 24/7, 365 days a year.
         <br />
         <br /> Our team of expert plumbers are fully qualified and experiences
         in dealing with all kinds of plumbing emergencies, from burst pipes and
-        leas to boiler breakdowns and blocked drains. We use the latest
-        technology and equipment to diagnose and resolve issues quickly and
-        efficiently, saving you time and money.
+        leaks to blocked drains. We use the latest technology and equipment to
+        diagnose and resolve issues quickly and efficiently, saving you time and
+        money.
       </Text>
     </Box>
   )

@@ -15,7 +15,7 @@ function FrequentlyAskedQuestions() {
     {
       faq: 'How quickly can you respond to an emergency plumbing issue?',
       answer:
-        'As an emergency plumber based in Cambridge, we understand that plumbing issues can happen at any time and need immediate attention. We aim to reach your premises within an hour of your call, depending on traffic conditions and the distance to your location.',
+        'As an emergency plumber based in Oxfordshire, we understand that plumbing issues can happen at any time and need immediate attention. We aim to reach your premises within an hour of your call, depending on traffic conditions and the distance to your location.',
     },
     {
       faq: 'What sort of plumbing emergencies do you handle?',
@@ -40,16 +40,20 @@ function FrequentlyAskedQuestions() {
       justifyContent="center"
       zIndex={1}
       bg="#2A54A8"
-      p="80px"
+      p={{ base: '8px', tablet: '16px', desktop: '80px' }}
     >
       <Flex
         direction="column"
         w={{ base: '100%', md: '66%' }}
         py={{ base: '16px', md: '40px' }}
-        gap="40px"
+        gap={{ base: '8px', tablet: '16px', desktop: '40px' }}
       >
         <Flex direction="column" gap="8px">
-          <Text fontSize="40px" color="white" fontWeight="500">
+          <Text
+            fontSize={{ base: '20px', tablet: '20px', desktop: '40px' }}
+            color="white"
+            fontWeight="500"
+          >
             We’re here to help
           </Text>
           <Heading fontSize="61px" color="white" fontWeight="900">

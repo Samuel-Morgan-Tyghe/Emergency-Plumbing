@@ -22,9 +22,15 @@ const shadows = {
   xl: '0px 8px 36px rgba(0, 0, 0, 0.08)',
   xxl: '0px 16px 64px rgba(0, 0, 0, 0.08)',
 }
+const breakpoints = {
+  base: '320px',
+  tablet: '768px',
+  desktop: '1200px',
+}
 
 export const theme = extendTheme({
   colors,
+  breakpoints,
   fonts,
   shadows,
   components: {

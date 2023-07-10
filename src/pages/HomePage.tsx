@@ -54,18 +54,36 @@ const HomePage: React.FC = () => {
     <>
       <Header />
 
-      <Flex paddingX={'80px'} bg="#ffffff" overflow="auto">
+      <Flex
+        direction={{ base: 'column', desktop: 'row' }}
+        paddingX={{ base: '8px', tablet: '16px', desktop: '80px' }}
+        bg="#ffffff"
+        overflow="auto"
+      >
         <MainImage />
-        <Center flexDirection="column" w="100%" p="80px">
-          <Flex direction="column" fontSize="80px" fontWeight="700">
-            <Heading fontSize="80px" fontWeight="700">
+        <Center
+          flexDirection="column"
+          w="100%"
+          p={{ base: '8px', tablet: '16px', desktop: '80px' }}
+        >
+          <Flex
+            direction="column"
+            fontSize={{ base: '20px', tablet: '40px', desktop: '80px' }}
+            fontWeight="700"
+          >
+            <Heading fontWeight="700">
               We Fix All Your Plumbing
-              <Heading fontSize="80px" fontWeight="700" color="#E83A17">
+              <Heading fontWeight="700" color="#E83A17">
                 Problems
               </Heading>
             </Heading>
           </Flex>
-          <Flex alignItems="center" justifyContent="space-between" w="100%">
+          <Flex
+            direction={{ base: 'column', desktop: 'row' }}
+            alignItems="center"
+            justifyContent="space-between"
+            w="100%"
+          >
             <Image src={trustPilot} alt="trustPilot" w="200px" />
             <Link href="tel:+1234567890" overflow="auto">
               <Flex
@@ -84,7 +102,7 @@ const HomePage: React.FC = () => {
                   color="white"
                   fontSize="24px"
                 >
-                  1800 123 456
+                  <Link href="tel:+447521276803">Call: 07521 276 803</Link>
                 </Text>
                 <Image src={Phone} />
               </Flex>
@@ -92,12 +110,15 @@ const HomePage: React.FC = () => {
           </Flex>
         </Center>
       </Flex>
-      <Box paddingX={'80px'}>
-        <Flex direction="column" pb="80px">
+      <Box paddingX={{ base: '8px', tablet: '16px', desktop: '80px' }}>
+        <Flex
+          direction="column"
+          pb={{ base: '8px', tablet: '16px', desktop: '80px' }}
+        >
           <MainText></MainText>
 
           <SimpleGrid
-            columns={3}
+            columns={{ base: 1, tablet: 2, desktop: 3 }}
             spacing={'16px'}
             gap={'16px'}
             padding={'16px'}
@@ -105,7 +126,7 @@ const HomePage: React.FC = () => {
             justifyItems={'center'}
           >
             {emergenciesText.map(e => (
-              <Emergencies>
+              <Emergencies key={e}>
                 <>
                   <Text fontWeight="800" fontSize="24px">
                     {e.title}

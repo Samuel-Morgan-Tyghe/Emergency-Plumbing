@@ -8,16 +8,17 @@ function Header() {
       // boxSize={250}
       width={'100%'}
       padding={15}
+      direction={{ base: 'column', desktop: 'row' }}
       justifyContent={'space-between'}
       alignItems={'center'}
-      px="120px"
-      py="80px"
+      px={{ base: '8px', tablet: '16px', desktop: '120px' }}
+      py={{ base: '8px', tablet: '16px', desktop: '40px' }}
     >
       <Flex direction={'column'}>
         <Text
           color={'white'}
           bg="#2A54A8"
-          align={'left'}
+          align={{ base: 'center', desktop: 'left' }}
           fontWeight={700}
           fontSize="38px"
         >
@@ -26,7 +27,7 @@ function Header() {
         <Text
           color={'white'}
           bg="#2A54A8"
-          align={'left'}
+          align={{ base: 'center', desktop: 'left' }}
           fontWeight={700}
           fontSize="28px"
         >
@@ -34,6 +35,7 @@ function Header() {
         </Text>
       </Flex>
       <Flex
+        direction={{ base: 'column', desktop: 'row' }}
         justifyContent="center"
         alignItems="center"
         gap="28px"
@@ -45,7 +47,7 @@ function Header() {
           Contact Us
         </Text>
         <Text bg="#2A54A8" align={'right'} fontWeight={700} cursor="pointer">
-          <Link href="tel:+1234567890">Call: 1800 123 456</Link>
+          <Link href="tel:+447521276803">Call: 07521 276 803</Link>
         </Text>
       </Flex>
     </Flex>
